@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  color: #636363;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  background-color: white;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header #logo .navbar-brand {
+  font-size: 25px;
+  font-weight: 700;
+  color: black;
+  text-transform: capitalize;
+}
+
+.ql {
+  padding: 0 10px;
+}
+
+#myModal .modal-dialog {
+  max-width: 800px;
+}
