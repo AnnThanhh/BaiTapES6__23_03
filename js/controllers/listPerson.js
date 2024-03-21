@@ -22,7 +22,6 @@ export default class ListPerson {
   }
 
   filterByType(type) {
-    // Kiểm tra kiểu dữ liệu của type
     switch (type) {
       case "Student":
         return this.list.filter((person) => person instanceof Student);

@@ -392,9 +392,17 @@ document.getElementById("sortByName").onclick = () => {
   renderUI(sortByName);
 };
 
-const filterbyName = () => {
-  const filteredStudents = listPerson.filterByType("Student");
-  const filteredEmployees = listPerson.filterByType("Employee");
-  const filteredCustomers = listPerson.filterByType("Customer");
-  const filteredPersons = listPerson.filterByType("Person"); // Mặc định
-};
+function filtedPerson(person) {
+  let type = document.getElementById("Loai").value;
+  let filtedPerson = [];
+
+  if (type === "all") {
+    filtedPerson = listPerson.list;
+  } else {
+    filtedPerson = listPerson.list.filter(function (person) {
+      return person.loai === type;
+    });
+  }
+
+  renderUI(filtedPerson);
+}
