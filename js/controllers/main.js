@@ -210,6 +210,7 @@ const themNg = () => {
   renderUI(listPerson.list);
   setLocalStorage();
 };
+window.themNg = themNg
 
 const renderUI = (listPerson) => {
   let content = "";
@@ -262,6 +263,7 @@ const editPerson = (id) => {
   document.getElementById("triGia").value = person.giaTriDon;
   document.getElementById("danhGia").value = person.danhGia;
 };
+window.editPerson = editPerson
 
 const updatePerson = () => {
   const loai = document.getElementById("loai").value;
@@ -323,12 +325,14 @@ const updatePerson = () => {
   renderUI(listPerson.list);
   setLocalStorage();
 };
+window.updatePerson = updatePerson
 
 const deletePerson = (id) => {
   listPerson.xoaNg(id);
   renderUI(listPerson.list);
   setLocalStorage();
 };
+window.deletePerson = deletePerson
 
 const setLocalStorage = () => {
   const arrString = JSON.stringify(listPerson.list);
