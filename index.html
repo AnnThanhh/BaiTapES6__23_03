@@ -55,11 +55,11 @@
                         <!-- END BUTTON THÊM MỚI -->
                     </div>
                     <div class="col-md-3">
-                        <select class="custom-select" id="Loai" onchange="filtedPerson(person)">
-                            <option value="all" selected>Tất cả</option>
-                            <option value="Student">Học viên</option>
-                            <option value="Employee">Nhân viên</option>
-                            <option value="Customer">Khách hàng</option>
+                        <select class="custom-select" id="selLoai" onchange="filtedPerson()">
+                            <option value="all" selected>ALL</option>
+                            <option value="Student">Student</option>
+                            <option value="Employee">Employee</option>
+                            <option value="Customer">Customer</option>
                         </select>
                     </div>
                     <div class="col-md-3">
@@ -112,17 +112,17 @@
                                 <label>Loại</label>
                                 <select class="custom-select d-block w-100" id="loai" required>
                                     <option value="all" selected>Tất cả</option>
-                                    <option value="Student">Học viên</option>
-                                    <option value="Employee">Nhân viên</option>
-                                    <option value="Customer">Khách hàng</option>
+                                    <option value="Student">Student</option>
+                                    <option value="Employee">Employee</option>
+                                    <option value="Customer">Customer</option>
                                 </select>
                                 <div id="invalidLoai" class="invalid-form"></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label>Mã</label>
-                                    <input type="text" class="form-control" id="spID" placeholder="Nhập ID" value=""
-                                        required />
+                                    <input type="text" disabled class="form-control" id="spID" placeholder="Nhập ID"
+                                        value="" required />
                                     <div id="spID" class="invalid-feedback"></div>
                                 </div>
                                 <div class="col-md-6 mb-3">

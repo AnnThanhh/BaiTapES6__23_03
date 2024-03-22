@@ -1,11 +1,11 @@
 function Validation() {
   this.kiemTraTong = function (value, spanId, message) {
     if (value === "") {
-      getEle(spanId).innerHTML = message;
+      document.getElementById(spanId).innerHTML = message;
       return false;
     }
 
-    getEle(spanId).innerHTML = "";
+    document.getElementById(spanId).innerHTML = "";
     return true;
   };
 
@@ -16,12 +16,12 @@ function Validation() {
       "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$";
     if (value.match(letter)) {
       // hợp lệ
-      getEle(spanId).innerHTML = "";
+      document.getElementById(spanId).innerHTML = "";
       return true;
     }
 
     // k hợp lệ
-    getEle(spanId).innerHTML = message;
+    document.getElementById(spanId).innerHTML = message;
     return false;
   };
 
@@ -30,12 +30,12 @@ function Validation() {
 
     if (value.match(letter)) {
       // hợp lệ
-      getEle(spanId).innerHTML = "";
+      document.getElementById(spanId).innerHTML = "";
       return true;
     }
 
     // k hợp lệ
-    getEle(spanId).innerHTML = mess;
+    document.getElementById(spanId).innerHTML = mess;
     return false;
   };
 
@@ -52,12 +52,12 @@ function Validation() {
 
     if (exist) {
       // k hợp lệ
-      getEle(spanId).innerHTML = mess;
+      document.getElementById(spanId).innerHTML = mess;
       return false;
     }
 
     // hợp lệ
-    getEle(spanId).innerHTML = "";
+    document.getElementById(spanId).innerHTML = "";
     return true;
   };
 }

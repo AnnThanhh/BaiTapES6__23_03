@@ -1,12 +1,12 @@
 import Person from "./person.js";
 export default class Employee extends Person {
-  constructor(name, diaChi, id, email, loai, tongNgay, luongNgay) {
-    super(name, diaChi, id, email, loai);
-    this.tongNgay = tongNgay;
-    this.luongNgay = luongNgay;
+  constructor(_id, _name, _diaChi, _email, _loai, _tongNgay, _luongNgay) {
+    super(_id, _name, _diaChi, _email, _loai);
+    this.tongNgay = _tongNgay;
+    this.luongNgay = _luongNgay;
+    this.tongLuong = 0
   }
-
-  tongLuong() {
-    return this.tongNgay * this.luongNgay;
+  tinhTongLuong() {
+    this.tongLuong = this.tongNgay * this.luongNgay;
   }
 }
